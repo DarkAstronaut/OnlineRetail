@@ -1,0 +1,46 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+---
+title: "Case Study 3 - Patterns and Trends of Customer Behavior"
+author: "DarkAstronaut"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+### Aim
+  The aim of this case study is to find how a Customer acts (Purchases made by the customer) and to gain an insight on the type of the purchases made on an online platform in various countries. 
+
+### Data
+```{r FirstSteps, include= FALSE}
+setwd("C:/Users/vk0589/OneDrive - UNT System/Documents/UNT/INFO_5307/Datasets")
+#install.packages("tidyverse")
+library(readxl)
+data1 <- read_excel("OnlineRetail.xlsx")
+data2 <- as.data.frame(data1)
+```
+We use the dataset **OnlineRetail.xlsx** (Source: Kaggle). The data is in a Excel Workbook (XLSX) File with 8 Attributes and 541909 Observations. The attributes are:
+```{r ColNames,echo = FALSE, message= FALSE}
+names(data2)
+```
+<!--and the sample data is:
+```{r SampleData,echo = FALSE, message= FALSE}
+head(data2)
+```
+-->
+Instead of working on the complete data, we will take few countries from the below mentioned list
+```{r CountryList, echo=FALSE, message=FALSE}
+print(levels(as.factor(data2$Country)))
+```
+The Countries that I would be working on are:
+- USA
+- Japan
+- 
+- 
+
+
+
